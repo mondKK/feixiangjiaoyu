@@ -38,11 +38,11 @@
             <p>待办事项 <i class="el-icon-s-unfold"></i></p>
             <ul>
                 <li>
-                    <div><img src="../assets/img/15.png" alt=""></div>
+                    <div><img src="../assets/img/15.png" alt="" @click="put"></div>
                     <div><p>12</p><p>待付款订单</p></div>
                 </li>
                 <li>
-                    <div><img src="../assets/img/16.png" alt=""></div>
+                    <div><img src="../assets/img/16.png" alt="" @click="put"></div>
                     <div><p>12</p><p>待付款订单</p></div>
                 </li>
                 <li style=" border-right:none">
@@ -58,6 +58,7 @@
             <div class="img_div">
                 <img src="../assets/img/19.png" alt="">
             </div>
+            
         </div>
     </div>
 </template>
@@ -218,6 +219,18 @@ ul{
 
 <script>
 export default {
-    name:'content1'
+    name:'content1',
+    data() {
+        return {
+            
+        }
+    },
+    methods:{
+        put:function(){
+            this.$router.push({
+                path:'/content7'
+            })
+        }
+    }
 }
 </script>

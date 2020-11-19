@@ -2,7 +2,7 @@
   <div>
     <el-container style="height: 940px; border: 1px solid #eee">
       <el-aside width="220px" style="background-color: rgb(238, 241, 246)">
-        <el-menu :default-openeds="['1', '3']" class="left">
+        <el-menu :default-openeds="['2','7']" class="left">
           <div class="title"><img src="../assets/img/1.png" alt=""> 非翔教育</div>
            <el-menu-item-group>
               <template slot="title"><router-link tag="div" to="./Shouye"><div class="sy"><img src="../assets/img/3.png">首页</div></router-link></template>
@@ -19,24 +19,24 @@
             <el-menu-item-group>
               <el-menu-item style="color:#909399;text-align: center" index="2-1"><router-link to="/content2">轮播图管理</router-link></el-menu-item>
               <el-menu-item style="color:#909399;text-align: center" index="2-2"><router-link to="/content3">课程管理</router-link></el-menu-item>
-              <el-menu-item style="color:#909399;text-align: center" index="2-3">教育头条</el-menu-item>
-              <el-menu-item style="color:#909399;text-align: center" index="2-4">活动列表</el-menu-item>
-              <el-menu-item style="color:#909399;text-align: center" index="2-5">明星教师</el-menu-item>
+              <el-menu-item style="color:#909399;text-align: center" index="2-3"><router-link to="/content4">教育头条</router-link></el-menu-item>
+              <el-menu-item style="color:#909399;text-align: center" index="2-4"><router-link to="/content5">活动列表</router-link></el-menu-item>
+              <el-menu-item style="color:#909399;text-align: center" index="2-5"><router-link to="/content6">明星教师</router-link></el-menu-item>
             </el-menu-item-group>
           </el-submenu>
           <el-submenu index="3">
             <template slot="title">
-              <div class="tilie2"><img src="../assets/img/4.png"><span style="">订单管理</span></div>
+              <router-link to="/content7"><div class="tilie2"><img src="../assets/img/4.png"><span style="">订单管理</span></div></router-link>
             </template>
           </el-submenu>
           <el-submenu index="4">
             <template slot="title">
-              <div class="tilie2"><img src="../assets/img/5.png"><span style="">用户管理</span></div>
+              <router-link to="/usermessage"><div class="tilie2"><img src="../assets/img/5.png"><span style="">用户管理</span></div></router-link>
             </template>
           </el-submenu>
           <el-submenu index="5">
             <template slot="title">
-              <div class="tilie2"><img src="../assets/img/6.png"><span style="">财务管理</span></div>
+              <router-link to="/caiwuguanli"><div class="tilie2"><img src="../assets/img/6.png"><span style="">财务管理</span></div></router-link>
             </template>
           </el-submenu>
           <el-submenu index="6">
@@ -49,11 +49,11 @@
               <div class="tilie2"><img src="../assets/img/8.png"><span style="">设置</span></div>
             </template>
             <el-menu-item-group>
-              <el-menu-item style="color:#909399;text-align: center" index="7-1">通用设置</el-menu-item>
-              <el-menu-item style="color:#909399;text-align: center" index="7-2">关于我们</el-menu-item>
-              <el-menu-item style="color:#909399;text-align: center" index="7-3">员工管理</el-menu-item>
-              <el-menu-item style="color:#909399;text-align: center" index="7-4">角色管理</el-menu-item>
-              <el-menu-item style="color:#909399;text-align: center" index="7-5">操作日志</el-menu-item>
+              <router-link to="/setting"><el-menu-item style="color:#909399;text-align: center" index="7-1">通用设置</el-menu-item></router-link>
+              <router-link to="/aboutwe"><el-menu-item style="color:#909399;text-align: center" index="7-2">关于我们</el-menu-item></router-link>
+              <router-link to="/workers"><el-menu-item style="color:#909399;text-align: center" index="7-3">员工管理</el-menu-item></router-link>
+              <router-link to="/rolemessage"><el-menu-item style="color:#909399;text-align: center" index="7-4">角色管理</el-menu-item></router-link>
+              <router-link to="/madelod"><el-menu-item style="color:#909399;text-align: center" index="7-5">操作日志</el-menu-item></router-link>
             </el-menu-item-group>
           </el-submenu>
         </el-menu>
@@ -65,18 +65,12 @@
           <img src="../assets/img/9.png" style="margin-right: 15px;vertical-align: middle"/>
           <span style="color:white;font-weight:bolder">Daysy</span>
         </el-header>
-        
-        <!-- <keep-alive> -->
                 
             <el-main style="width: 1200px; margin: 0 auto;background-color:">
-              <router-view>
-                <!-- <Mainye></Mainye> -->
-                <!-- <Content2></Content2> -->
-              </router-view>
-                
+              <keep-alive>
+                <router-view></router-view>
+              </keep-alive>
             </el-main>
-
-              <!-- </keep-alive> -->
 
         </el-container>
     </el-container>
@@ -118,7 +112,7 @@
   margin-right: 10px;
 }
 .title{
-  padding: 15px 15px;
+  padding: 15px 8px;
   text-align: center;
   color: #9137f3;
   font-weight: bolder;

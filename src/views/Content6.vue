@@ -1,13 +1,13 @@
 <template>
   <div id="main">
-    <h2>轮播图管理</h2>
+    <h2>明星教师</h2>
     <div class="first">
       <p>
         <img src="../assets/img/20.png" alt width="15" height="15" /> 筛选
       </p>
       <div class="first_a">
         <label for>输入搜索 :</label>
-        <input type="text" placeholder="输入轮播图标题..." />
+        <input type="text" placeholder="输入教师的姓名..." />
         <span>上传时间：</span>
         <el-date-picker
           v-model="value"
@@ -28,7 +28,7 @@
     <div class="secend">
       <div class="secend_one">
         <p>
-          <img src="../assets/img/21.png" alt width="15" height="14" /> 轮播图列表
+          <img src="../assets/img/21.png" alt width="15" height="14" /> 文章列表
         </p>
         <div class="aniu">
           <el-button
@@ -54,14 +54,15 @@
           header-cell-style="background-color:#9137f3; text-align: center;color:#ffffff"
         >
           <el-table-column type="selection" width="55" align="center"></el-table-column>
-          <el-table-column prop="img_name" label="轮播图名称" width="185" align="center"></el-table-column>
-          <el-table-column label="缩略图" width="185" align="center">
+          <el-table-column prop="teacher_name" label="教师姓名" align="center"></el-table-column>
+          <el-table-column label="教师头像" align="center">
             <template slot-scope="scope">
-              <img :src="scope.row.img" height="50" width="100" />
+              <img :src="scope.row.img" />
             </template>
           </el-table-column>
-          <el-table-column prop="name" label="上传人" width="185" align="center"></el-table-column>
-          <el-table-column label="上传日期" width="185" align="center">
+           <el-table-column prop="job" label="职位" align="center"></el-table-column>
+          <el-table-column prop="name" label="上传人" align="center"></el-table-column>
+          <el-table-column label="上传时间" align="center">
             <template slot-scope="scope">{{ scope.row.date }}</template>
           </el-table-column>
           <el-table-column prop="make" label="操作" show-overflow-tooltip width="185" align="center">
@@ -172,59 +173,59 @@
 
 <script>
 export default {
-  name: "content2",
+  name: "content6",
   data() {
     return {
       value: "",
       tableData: [
         {
+          teacher_name:'Jason',
           date: "201-01-25 10:55",
           name: "Daisy",
-          address: "上海市普陀区金沙江路 1518 弄",
-          img_name: "banner",
-         img: require("../assets/img/22.png")
+          job: "英语外教",
+         img: require("../assets/img/25.png")
         },
         {
+         teacher_name:'Jason',
           date: "201-01-25 10:55",
           name: "Daisy",
-          address: "上海市普陀区金沙江路 1518 弄",
-          img_name: "banner",
-          img: require("../assets/img/22.png")
+          job: "英语外教",
+         img: require("../assets/img/25.png")
         },
         {
+         teacher_name:'Jason',
           date: "201-01-25 10:55",
           name: "Daisy",
-          address: "上海市普陀区金沙江路 1518 弄",
-          img_name: "banner",
-         img: require("../assets/img/22.png")
+          job: "英语外教",
+         img: require("../assets/img/25.png")
         },
         {
+         teacher_name:'Jason',
           date: "201-01-25 10:55",
           name: "Daisy",
-          address: "上海市普陀区金沙江路 1518 弄",
-          img_name: "banner",
-         img: require("../assets/img/22.png")
+          job: "英语外教",
+         img: require("../assets/img/25.png")
         },
         {
+          teacher_name:'Jason',
           date: "201-01-25 10:55",
           name: "Daisy",
-          address: "上海市普陀区金沙江路 1518 弄",
-          img_name: "banner",
-         img: require("../assets/img/22.png")
+          job: "英语外教",
+         img: require("../assets/img/25.png")
         },
         {
+          teacher_name:'Jason',
           date: "201-01-25 10:55",
           name: "Daisy",
-          address: "上海市普陀区金沙江路 1518 弄",
-          img_name: "banner",
-         img: require("../assets/img/22.png")
+          job: "英语外教",
+         img: require("../assets/img/25.png")
         },
         {
+         teacher_name:'Jason',
           date: "201-01-25 10:55",
           name: "Daisy",
-          address: "上海市普陀区金沙江路 1518 弄",
-          img_name: "banner",
-          img: require("../assets/img/22.png")
+          job: "英语外教",
+         img: require("../assets/img/25.png")
         }
       ],
       multipleSelection: [],
